@@ -94,3 +94,64 @@ body {
   color: var(--paper);
   text-decoration: underline;
 }
+
+.suite {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.suite h2 {
+  font-size: 1.4rem;
+}
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  border: 2px solid var(--card-accent, var(--accent));
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--ink);
+  background: #fff;
+  transition: transform 0.15s ease;
+}
+
+.repo-card:hover {
+  transform: translateY(-2px);
+}
+
+.repo-name {
+  font-weight: 700;
+}
+
+.repo-desc {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.suite-note {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem 3rem;
+  font-size: 0.85rem;
+}
+
+.disclaimer {
+  opacity: 0.7;
+}
