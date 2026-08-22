@@ -2,6 +2,7 @@
   --ink: #141a24;
   --paper: #eef1f4;
   --accent: #c76b2c;
+  --accent-text: #a4521c;
   --font-display: "Space Grotesk", "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
 }
@@ -27,6 +28,13 @@ body {
   padding: 4rem 1.5rem 3rem;
 }
 
+.hero h1 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 0;
+}
+
 .hero-logo {
   width: min(280px, 70vw);
   height: auto;
@@ -42,9 +50,9 @@ body {
   font-family: var(--font-mono);
   font-size: 0.9rem;
   letter-spacing: 0.05em;
-  color: var(--accent);
+  color: var(--accent-text);
   text-decoration: none;
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent-text);
   padding-bottom: 2px;
 }
 
@@ -56,15 +64,19 @@ body {
   max-width: 40rem;
   margin: 0 auto;
   padding: 2rem 1.5rem;
-  text-align: center;
 }
 
 .about h2 {
   font-size: 1.4rem;
+  text-align: center;
+}
+
+.contact-links {
+  text-align: center;
 }
 
 .contact-links a {
-  color: var(--accent);
+  color: var(--accent-text);
   text-decoration: none;
   font-family: var(--font-mono);
   font-size: 0.9rem;
@@ -88,6 +100,7 @@ body {
 
 .claude-section h2 {
   font-size: 1.4rem;
+  text-align: center;
 }
 
 .claude-section a {
@@ -99,11 +112,11 @@ body {
   max-width: 60rem;
   margin: 0 auto;
   padding: 2.5rem 1.5rem;
-  text-align: center;
 }
 
 .suite h2 {
   font-size: 1.4rem;
+  text-align: center;
 }
 
 .repo-grid {
@@ -111,6 +124,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.25rem;
   margin: 1.5rem 0;
+  text-align: center;
 }
 
 .repo-card {
@@ -142,6 +156,8 @@ body {
 }
 
 .suite-note {
+  max-width: 40rem;
+  margin: 0 auto;
   font-size: 0.9rem;
   opacity: 0.75;
 }
