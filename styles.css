@@ -51,3 +51,25 @@ body {
 .cta:hover {
   opacity: 0.75;
 }
+
+.about {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 1.4rem;
+}
+
+.contact-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
