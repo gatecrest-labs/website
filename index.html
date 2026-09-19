@@ -8,94 +8,176 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&family=Overpass+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <h1><img src="assets/gatecrest-labs-logo.svg" width="280" alt="Gatecrest Labs" class="hero-logo" /></h1>
-    <p class="tagline">A personal lab for AI-assisted software, built with Claude.</p>
-    <a class="cta" href="https://github.com/gatecrest-labs">View the repos on GitHub →</a>
-  </header>
-
-  <main>
-  <section class="about">
-    <h2>About the builder</h2>
-    <p>
-      Gatecrest Labs is built and maintained by Alan Wodarski, a Cyber
-      Security Leader exploring what AI-assisted development can do across
-      the security and network lifecycle — architecture, engineering, and
-      operations.
-    </p>
-    <p class="contact-links">
-      <a href="https://www.linkedin.com/in/alan-wodarski/">LinkedIn</a>
-    </p>
-  </section>
-  <section class="claude-section">
-    <h2>Built with Claude</h2>
-    <p>
-      Every repo here is designed and built using Claude, Anthropic's AI, as
-      a development partner — via
-      <a href="https://claude.com/claude-code">Claude Code</a> for agentic
-      development — planning changes, writing and reviewing code, and
-      iterating against real Fortinet APIs — and
-      <a href="https://modelcontextprotocol.io">MCP</a> to connect Claude
-      directly to those APIs and to FortiManager/FortiAnalyzer data.
-      4tAnalyst and 4tHealth+ go a step further and use an LLM at runtime,
-      via MCP, to review and draft firewall rule changes before a human
-      ever sees them.
-    </p>
-    <p>
-      This is also a proving ground for going deeper with Anthropic's tools
-      and, over time, for pursuing Anthropic certifications as they become
-      available.
-    </p>
-  </section>
-  <section class="suite">
-    <h2>The Fortinet suite</h2>
-    <div class="repo-grid">
-      <a class="repo-card" style="--card-accent:#2f9e6e" href="https://github.com/gatecrest-labs/4thealth">
-        <img src="assets/4thealth-mark.svg" width="56" alt="" />
-        <span class="repo-name">4tHealth</span>
-        <span class="repo-desc">Fabric health dashboard</span>
-      </a>
-      <a class="repo-card" style="--card-accent:#3f7fd1" href="https://github.com/gatecrest-labs/4tLog">
-        <img src="assets/4tlog-mark.svg" width="56" alt="" />
-        <span class="repo-name">4tLog</span>
-        <span class="repo-desc">Pulling log files from FortiAnalyzer</span>
-      </a>
-      <a class="repo-card" style="--card-accent:#e08a2c" href="https://github.com/gatecrest-labs/4tAnalyst">
-        <img src="assets/4tanalyst-mark.svg" width="56" alt="" />
-        <span class="repo-name">4tAnalyst</span>
-        <span class="repo-desc">AI-assisted rule request review</span>
-      </a>
-      <a class="repo-card" style="--card-accent:#2f9e6e" href="https://github.com/gatecrest-labs/4thealth-plus">
-        <img src="assets/4thealthplus-mark.svg" width="56" alt="" />
-        <span class="repo-name">4tHealth+</span>
-        <span class="repo-desc">Health + policy hygiene + AI rule design</span>
-      </a>
-      <a class="repo-card" style="--card-accent:#2c8c9c" href="https://github.com/gatecrest-labs/4tExecutive">
-        <img src="assets/4texecutive-mark.svg" width="56" alt="" />
-        <span class="repo-name">4tExecutive</span>
-        <span class="repo-desc">Executive rollup dashboard</span>
-      </a>
+  <div class="wrap">
+    <div class="bar">
+      <img src="assets/gatecrest-labs-logo.svg" width="170" height="39" alt="Gatecrest Labs" class="logo" />
+      <nav aria-label="Elsewhere">
+        <a href="https://github.com/gatecrest-labs">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/alan-wodarski/">LinkedIn ↗</a>
+      </nav>
     </div>
-    <p class="suite-note">
-      4tHealth+ is a newer, more capable sibling to 4tHealth and 4tLog, not
-      a replacement for either. 4tExecutive sits a layer above all three,
-      aggregating their data rather than duplicating it.
-    </p>
-  </section>
-  </main>
 
-  <footer class="site-footer">
-    <p class="disclaimer">
+    <header class="intro">
+      <h1>Every tool is a stop. Claude runs the whole line.</h1>
+      <p>
+        A personal lab for AI-assisted software, built with Claude. Follow a
+        Fortinet line to the tool you need, or ride the Claude line to see
+        how it was built.
+      </p>
+    </header>
+
+    <main>
+      <div class="map" role="group" aria-label="Map of the tool suite">
+    <svg viewBox="0 0 1100 470" role="img" aria-labelledby="mt md">
+      <title id="mt">Suite map</title>
+      <desc id="md">FortiManager line: 4tHealth, 4tHealth+, 4tAnalyst. FortiAnalyzer line: 4tLog. Both meet at 4tExecutive. The Claude line runs beneath, from Claude Code through MCP and LLM at runtime to future certifications. A dashed Check Point line is planned.</desc>
+
+      <!-- FortiManager line (green) -->
+      <text class="line-name" x="30" y="86" style="fill:var(--fmg-text)">FortiManager line</text>
+      <path d="M40 110 H700 Q760 110 760 170 V190" fill="none" stroke="var(--fmg)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- FortiAnalyzer line (blue) -->
+      <text class="line-name" x="30" y="226" style="fill:var(--faz-text)">FortiAnalyzer line</text>
+      <path d="M40 250 H760" fill="none" stroke="var(--faz)" stroke-width="12" stroke-linecap="round"/>
+      <!-- trunk to executive -->
+      <path d="M760 190 V250 H860" fill="none" stroke="var(--exec)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Claude line (orange) beneath, interchanging under tools -->
+      <text class="line-name" x="30" y="346" style="fill:var(--claude-text)">Claude line</text>
+      <path d="M40 370 H830" fill="none" stroke="var(--claude)" stroke-width="12" stroke-linecap="round"/>
+      <path d="M830 370 H1050" fill="none" stroke="var(--claude)" stroke-width="12" stroke-linecap="round" stroke-dasharray="2 18"/>
+
+      <!-- Check Point line (dashed magenta) -->
+      <path d="M900 110 H1050" fill="none" stroke="var(--cp)" stroke-width="12" stroke-linecap="round" stroke-dasharray="2 18"/>
+      <text class="line-name" x="900" y="86" style="fill:var(--cp-text)">Check Point line</text>
+
+      <!-- FMG stations -->
+      <a class="stn" href="https://github.com/gatecrest-labs/4thealth"><g>
+        <circle cx="120" cy="110" r="12" style="stroke:var(--fmg)"/>
+        <text class="lbl" x="120" y="152" text-anchor="middle">4tHealth</text>
+        <text class="sub" x="120" y="170" text-anchor="middle">fabric health</text></g></a>
+      <a class="stn" href="https://github.com/gatecrest-labs/4thealth-plus"><g>
+        <circle cx="330" cy="110" r="12" style="stroke:var(--fmg)"/>
+        <text class="lbl" x="330" y="152" text-anchor="middle">4tHealth+</text>
+        <text class="sub" x="330" y="170" text-anchor="middle">health + hygiene + AI</text></g></a>
+      <a class="stn" href="https://github.com/gatecrest-labs/4tAnalyst"><g>
+        <circle cx="560" cy="110" r="12" style="stroke:var(--fmg)"/>
+        <text class="lbl" x="560" y="152" text-anchor="middle">4tAnalyst</text>
+        <text class="sub" x="560" y="170" text-anchor="middle">rule request review</text></g></a>
+
+      <!-- FAZ station -->
+      <a class="stn" href="https://github.com/gatecrest-labs/4tLog"><g>
+        <circle cx="330" cy="250" r="12" style="stroke:var(--faz)"/>
+        <text class="lbl" x="330" y="292" text-anchor="middle">4tLog</text>
+        <text class="sub" x="330" y="310" text-anchor="middle">FortiAnalyzer logs</text></g></a>
+
+      <!-- Terminus: 4tExecutive -->
+      <a class="stn" href="https://github.com/gatecrest-labs/4tExecutive"><g>
+        <circle cx="860" cy="250" r="16" style="stroke:var(--exec)"/>
+        <text class="lbl" x="860" y="292" text-anchor="middle">4tExecutive</text>
+        <text class="sub" x="860" y="310" text-anchor="middle">rollup of the suite</text></g></a>
+
+      <!-- Claude line stations (not links; these are the journey) -->
+      <g><circle cx="120" cy="370" r="10" fill="#fff" stroke="var(--claude)" stroke-width="6"/>
+        <text class="lbl" x="120" y="412" text-anchor="middle" style="font-size:15px">Claude Code</text>
+        <text class="sub" x="120" y="430" text-anchor="middle">plan · write · review</text></g>
+      <g><circle cx="330" cy="370" r="10" fill="#fff" stroke="var(--claude)" stroke-width="6"/>
+        <text class="lbl" x="330" y="412" text-anchor="middle" style="font-size:15px">MCP</text>
+        <text class="sub" x="330" y="430" text-anchor="middle">Claude ↔ FMG / FAZ data</text></g>
+      <g><circle cx="560" cy="370" r="10" fill="#fff" stroke="var(--claude)" stroke-width="6"/>
+        <text class="lbl" x="560" y="412" text-anchor="middle" style="font-size:15px">LLM at runtime</text>
+        <text class="sub" x="560" y="430" text-anchor="middle">4tAnalyst · 4tHealth+</text></g>
+      <g><circle cx="830" cy="370" r="10" fill="#fff" stroke="var(--claude)" stroke-width="6" stroke-dasharray="4 4"/>
+        <text class="lbl" x="830" y="412" text-anchor="middle" style="font-size:15px">Certifications</text>
+        <text class="sub" x="830" y="430" text-anchor="middle">as they become available</text></g>
+
+      <!-- Check Point future stops -->
+      <g><circle cx="960" cy="110" r="10" fill="#fff" stroke="var(--cp)" stroke-width="6" stroke-dasharray="4 4"/>
+        <text class="lbl" x="960" y="152" text-anchor="middle" style="font-size:15px">Coming next</text>
+        <text class="sub" x="960" y="170" text-anchor="middle">first tool TBA</text></g>
+    </svg>
+  </div>
+
+      <div class="key" aria-hidden="true">
+        <span><i style="background:var(--fmg)"></i>Talks to FortiManager</span>
+        <span><i style="background:var(--faz)"></i>Talks to FortiAnalyzer</span>
+        <span><i style="background:var(--exec)"></i>Rolls both up</span>
+        <span><i style="background:var(--claude)"></i>How Claude was used</span>
+        <span><i style="background:repeating-linear-gradient(90deg,var(--cp) 0 4px,transparent 4px 8px)"></i>Planned</span>
+      </div>
+
+      <section class="dir" aria-label="The Fortinet suite">
+        <div>
+          <h2 style="--c:var(--fmg)">FortiManager line</h2>
+          <ul>
+        <li><a href="https://github.com/gatecrest-labs/4thealth"><img src="assets/4thealth-mark.svg" width="36" height="36" alt="" /><b>4tHealth</b><span>Fabric health dashboard</span></a></li>
+        <li><a href="https://github.com/gatecrest-labs/4thealth-plus"><img src="assets/4thealthplus-mark.svg" width="36" height="36" alt="" /><b>4tHealth+</b><span>Health, policy hygiene, AI rule design</span></a></li>
+        <li><a href="https://github.com/gatecrest-labs/4tAnalyst"><img src="assets/4tanalyst-mark.svg" width="36" height="36" alt="" /><b>4tAnalyst</b><span>AI-assisted rule request review</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="--c:var(--faz)">FortiAnalyzer line</h2>
+          <ul>
+        <li><a href="https://github.com/gatecrest-labs/4tLog"><img src="assets/4tlog-mark.svg" width="36" height="36" alt="" /><b>4tLog</b><span>Pulling log files from FortiAnalyzer</span></a></li>
+          </ul>
+          <h2 style="--c:var(--exec); margin-top:1.5rem">Terminus</h2>
+          <ul>
+        <li><a href="https://github.com/gatecrest-labs/4tExecutive"><img src="assets/4texecutive-mark.svg" width="36" height="36" alt="" /><b>4tExecutive</b><span>Executive rollup dashboard</span></a></li>
+          </ul>
+          <p class="note">
+            4tHealth+ is a newer, more capable sibling to 4tHealth and 4tLog,
+            not a replacement for either. 4tExecutive sits a layer above all
+            three, aggregating their data rather than duplicating it.
+          </p>
+        </div>
+        <div>
+          <h2 class="dashed" style="--c:var(--cp)">Check Point line</h2>
+          <p>Planned. The same method applied to a second vendor.</p>
+        </div>
+      </section>
+
+      <section class="story" aria-labelledby="claude-h">
+        <div class="story-inner">
+          <h2 id="claude-h">Built with Claude</h2>
+          <p>
+            Every repo here is designed and built using Claude, Anthropic's AI,
+            as a development partner — via
+            <a href="https://claude.com/claude-code">Claude Code</a> for agentic
+            development — planning changes, writing and reviewing code, and
+            iterating against real Fortinet APIs — and
+            <a href="https://modelcontextprotocol.io">MCP</a> to connect Claude
+            directly to those APIs and to FortiManager/FortiAnalyzer data.
+            4tAnalyst and 4tHealth+ go a step further and use an LLM at runtime,
+            via MCP, to review and draft firewall rule changes before a human
+            ever sees them.
+          </p>
+          <p>
+            This is also a proving ground for going deeper with Anthropic's
+            tools and, over time, for pursuing Anthropic certifications as they
+            become available.
+          </p>
+        </div>
+      </section>
+
+      <section class="about" aria-labelledby="about-h">
+        <h2 id="about-h">About the builder</h2>
+        <p>
+          Gatecrest Labs is built and maintained by Alan Wodarski, a Cyber
+          Security Leader exploring what AI-assisted development can do across
+          the security and network lifecycle — architecture, engineering, and
+          operations.
+        </p>
+        <p><a href="https://www.linkedin.com/in/alan-wodarski/">LinkedIn</a></p>
+      </section>
+    </main>
+
+    <footer>
       A personal portfolio project — not affiliated with or endorsed by
-      Fortinet or Anthropic.
-    </p>
-    <p class="contact-links">
-      <a href="https://www.linkedin.com/in/alan-wodarski/">LinkedIn</a>
-    </p>
-  </footer>
+      Fortinet, Check Point or Anthropic.
+    </footer>
+  </div>
 </body>
 </html>
